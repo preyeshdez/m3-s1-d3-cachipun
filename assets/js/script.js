@@ -26,8 +26,8 @@ function main(){
     alert("Fin del juego");
 }
 
-function jugar(partida){
-    alert("Inicia la ronda " + partida);
+function jugar(ronda){
+    alert("Inicia la ronda " + ronda);
     // 1 = piedra, 2 = papel, 3 = tijeras.
     eleccionHumano = Number(prompt("Elegir:\n1: Piedra\n2: Papel\n3: Tijeras"));
     eleccionMaquina = Math.floor(Math.random() * (4 - 1) + 1);
@@ -60,4 +60,6 @@ function jugar(partida){
 
 };
 
-main();
+document.getElementById('botonInicio').addEventListener('click', function(){
+    main();
+});
